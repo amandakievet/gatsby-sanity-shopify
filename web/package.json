@@ -1,0 +1,59 @@
+{
+  "name": "your-project-title",
+  "private": true,
+  "description": "Boilerplate for Gatsby + Sanity + Shopify",
+  "version": "0.1.0",
+  "author": "Lucas Vocos <info@lucasvocos.com>",
+  "dependencies": {
+    "@sanity/client": "^0.147.3",
+    "babel-plugin-styled-components": "^1.10.7",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "gatsby": "^2.23.3",
+    "gatsby-image": "^2.2.34",
+    "gatsby-plugin-manifest": "^2.2.31",
+    "gatsby-plugin-offline": "^3.0.27",
+    "gatsby-plugin-react-helmet": "^3.1.16",
+    "gatsby-plugin-sass": "^2.1.27",
+    "gatsby-plugin-sharp": "^2.3.5",
+    "gatsby-plugin-styled-components": "^3.3.10",
+    "gatsby-source-filesystem": "^2.1.40",
+    "gatsby-source-sanity": "^5.0.5",
+    "gatsby-transformer-sharp": "^2.3.7",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.1",
+    "@testing-library/react": "^10.4.7",
+    "babel-jest": "^26.1.0",
+    "babel-preset-gatsby": "^0.5.2",
+    "enzyme-to-json": "^3.5.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.1.0",
+    "react-test-renderer": "^16.13.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build --log-pages",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
