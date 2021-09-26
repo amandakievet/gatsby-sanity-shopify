@@ -1,9 +1,13 @@
-require("dotenv").config()
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
+console.log(`**** ${process.env.GATSBY_SANITY_PROJECT_ID}`)
 module.exports = {
   siteMetadata: {
-    title: `change me`,
-    description: `change me`,
-    author: `your info here`,
+    title: `JFM Test`,
+    description: `A test for JFM's ecommerce site`,
+    author: `Amanda Kievet`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -32,9 +36,9 @@ module.exports = {
     {
       resolve: "gatsby-source-sanity",
       options: {
-        projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
-        dataset: process.env.REACT_APP_SANITY_DATASET,
-        token: process.env.REACT_APP_SANITY_API_TOKEN,
+        projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+        dataset: process.env.GATSBY_SANITY_DATASET,
+        token: process.env.GATSBY_SANITY_API_TOKEN,
       },
     },
     `gatsby-plugin-sass`,
@@ -42,4 +46,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

@@ -20,6 +20,7 @@
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-source-sanity": "^5.0.5",
     "gatsby-transformer-sharp": "^2.3.7",
+    "ink": "^3.0.9",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

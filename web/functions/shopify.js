@@ -1,15 +1,9 @@
 const sanityClient = require('@sanity/client');
 
-const {
-  REACT_APP_SANITY_API_TOKEN,
-  REACT_APP_SANITY_PROJECT_ID,
-  REACT_APP_SANITY_DATASET,
-} = process.env;
-
 const client = sanityClient({
-  projectId: REACT_APP_SANITY_PROJECT_ID,
-  dataset: REACT_APP_SANITY_DATASET,
-  token: REACT_APP_SANITY_API_TOKEN,
+  projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+  dataset: process.env.GATSBY_SANITY_DATASET,
+  token: process.env.GATSBY_SANITY_API_TOKEN,
   useCdn: true
 });
 
@@ -150,11 +144,11 @@ exports.handler = async (event, context) => {
       });
   } else if (data.hasOwnProperty('id') && (!data.hasOwnProperty('title') && !data.hasOwnProperty('handle'))) {
     // this is triggered if Shopify sends a Product Deletion webhook that does NOT contain anything besides an ID
-  
+
     // sets the "deleted" boolean to true
     // you could likely use this value in Gatsby to decide whether to render the item or not
 
-    // tread carefully: 
+    // tread carefully:
     return client
       .patch(data.id.toString())
       .set({ deleted: true })
@@ -169,7 +163,7 @@ exports.handler = async (event, context) => {
     // *~* OR *~*
 
     // DELETE FROM SANITY
-    // tread carefully here: you might not want to do this if you have products associated anywhere else such as "related products" or any other schemas. 
+    // tread carefully here: you might not want to do this if you have products associated anywhere else such as "related products" or any other schemas.
     // this will likely cause in your schemas breaking
     //   return client
     //     .delete(data.id.toString())
